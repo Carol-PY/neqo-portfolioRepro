@@ -90,6 +90,7 @@ body nav {
 	position: relative;
     padding: 5rem 5rem;
     background-color: LemonChiffon;
+    
 
 }
 
@@ -99,29 +100,28 @@ body nav {
 	font-size: 13rem;
 	color: hotpink;
 	display: block;
+	
 }
 
 .menu li a:hover{
  	color: white;
+ 	transition: 1s;
  }
 
 
 .submenu {
 	position: absolute;
 	display: none;
-	
 }
 
 .submenu li a{
 	padding: 5rem 5rem;
 	display: block;
- 
 }
 
 .menu li:hover .submenu {
 	display: block;
-	background-color:rgb(0, 0, 0, 0.8)
-	
+	background-color:rgb(0, 0, 0, 0.8);
 }
 
 
@@ -143,7 +143,7 @@ body nav {
  	object-fit: cover;
 	width: 190rem;
 	height: 290rem;
-	padding: 1%;
+	padding: 13px;
 
  }
 
@@ -167,6 +167,7 @@ body nav {
 	object-fit: cover;
 	width: 190rem;
 	height: 290rem;
+	background-color: black;
 	
 }
 
@@ -344,7 +345,7 @@ p a{
 	
 }
 
-.contentGrid{
+/*.contentGrid{
 	display: grid;
 	grid-template-columns: 1fr ;
 	grid-template-rows: auto;
@@ -382,7 +383,49 @@ p a{
 	grid-area: foot;
 
 }
+*//*  ANIMACIONES*/
 
+@keyframes slow{
+from{opacity: 0;}
+to {opacity: 1;}
+}
+
+.menu, .submenu{
+	animation-name:slow;
+	animation-duration: 1s;
+}
+.homePortfolio:hover,.proyectImg:hover{
+	filter: blur(2px);
+	cursor: pointer;
+}
+
+
+@keyframes shadow{
+from{opacity: 0;}
+to {opacity: 1;}
+}
+
+.PortfolioMain img{
+	animation-name:shadow;
+	filter: grayscale(88%);
+}
+
+.PortfolioMain img:hover{
+	cursor: pointer;
+	filter: grayscale(0)
+}
+
+/*
+@keyframes shadow{
+	from{}
+	to{}
+}
+
+.shadow{
+
+}
+*/
+/*
 @media screen and (max-width:768px){
 	 .contentGrid{
 	 	grid-template-columns: 25vw 25vw 25vw 25vw;
@@ -399,7 +442,7 @@ p a{
 	.neqoLogo{
 		text-align: right;
 	} 
-}
+}*/
 
 
 
