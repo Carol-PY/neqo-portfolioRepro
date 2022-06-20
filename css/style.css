@@ -221,7 +221,9 @@ footer ul li {
 
 #aboutmeBlock{
 	display: flex;
+
 	padding: 2%;
+
 }
 
 .neqoIrl{
@@ -231,6 +233,7 @@ footer ul li {
 .aboutmeText{
 	padding: 1% 0;
 	background-color: rgb(255, 222, 173, 0.9);
+
 }
 
 .colorGray{
@@ -386,7 +389,7 @@ p a{
 }
 
 
-*//*  ANIMACIONES*/
+/*  ANIMACIONES*/
 
 @keyframes slow{
 from{opacity: 0;}
@@ -418,7 +421,7 @@ to {opacity: 1;}
 	filter: grayscale(0)
 }
 
-
+	/*  FIN      FIN    ANIMACIONES*/
 
 	/*  LOS MEDIAQUERY  768  */
 
@@ -431,7 +434,13 @@ to {opacity: 1;}
 			"logo nav"
 			"head head"
 			"portf proy" 
+			"me me"
 			"foot foot";
+			}
+
+			#aboutme{
+			grid-area:me;
+
 			}
 
 			#principalNav{
@@ -443,10 +452,25 @@ to {opacity: 1;}
 				align-items: center;
 			}
 
-
 			.proyectsListHome{
 				flex-direction: column;
 			}
+
+			#aboutmeBlock{
+				flex-direction: column;
+				align-items: center;
+				padding: 0 10%;
+				padding-bottom: 10%;
+			}
+
+
+			.neqoIrl{
+				width: 50%;
+				border-radius: 200px;
+				filter:saturate(200%) ;
+			}
+
+			
 
 		}
 
@@ -455,15 +479,20 @@ to {opacity: 1;}
 			@media screen and (max-width:320px){
 				 .contentGrid{
 					display: grid;
-					grid-template-columns:repeat(1fr) ;
+					grid-template-columns:1fr ;
 					grid-template-rows: auto;
 					grid-template-areas: 
-					"logo "
+					"logo"
 					"nav"
 					"head"
 					"portf" 
 					"proy" 
+					"me"
 					"foot";
+					}
+
+					#principalNav{
+						display: none;
 					}
 
 					
@@ -477,13 +506,25 @@ to {opacity: 1;}
 					.proyectsListHome{
 						flex-direction: column;
 					}
-					
 
+					#aboutme{
+						grid-area:me;
+
+					}
+
+					
+					.neqoIrl{
+						width: 80%;
+						
+					}
+
+					#aboutmeBlock{
+						padding: 0 5%;
+						padding-bottom: 8%;
+						
+					}
 
 			}
-
-
-
 
 
 

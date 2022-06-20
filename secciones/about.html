@@ -4,22 +4,22 @@
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1 ">
 	<title>Neqo</title>
-	<link rel="short cut icon" href="imagenes/cat.png">
+	<link rel="short cut icon" href="imagenes/cat.webp">
 	<link rel="stylesheet"  href="../css/style.css">
-
-		<!-- aca el wow -->
-	<link rel="stylesheet" href="css/animate.css">
 	
 </head>
 
 
 <body>
-	 <nav>
-	 	
-		<img src="../imagenes/neqoDark2.svg" alt="Logo Principal" class="neqoLogo">
+	<div class="contentGrid">
+
+	 <nav id="logoHome">
+	 	<a href="../index.html">
+		<img src="imagenes/neqoDark2.svg" alt="Logo Principal" class="neqoLogo">
 	    </a>
 	 </nav>
-	   <nav>
+
+	   <nav  id="principalNav">
 	 	<ul class="menu">
 	 		<li class="paddingLeft">
 	 			<a href="../index.html">HOME</a>
@@ -63,18 +63,18 @@
 	 	</ul>
 	 	
 	 </nav>
-	<header> 
+	<header id="header"> 
 		<img class="inicioPortada" src="imagenes/FOqUr2qWUAIFr4e.webp" alt="Portada Principal">
 
 	</header>
-	<main>
-		<a href="#" id="aboutme"></a>
+
+	<main id="aboutme"> <a href="#"></a>
 		<h1>ABOUT ME</h1>
 
 
 		<div id="aboutmeBlock">
         
-		<img class="wow animate__backOutDown neqoIrl" src="imagenes/FOwoKj0XMAMRCbA.webp" alt="Neqo Irl">
+			<img class="neqoIrl" src="imagenes/FOwoKj0XMAMRCbA.webp" alt="Neqo Irl"> 
 		
 			<div class="aboutmeText">
 				<h2 class="colorGray">HI :)</h2>
@@ -92,12 +92,8 @@
 		</div>
 	</main>
 
-
-
-		
 	
-	
-	<footer > 
+	<footer id="pie" > 
 		<div id="footer">
 		<ul>
 			<li> 
@@ -131,12 +127,7 @@
 		<p class="footerTextPadding">Neqo © 2022. All rights reserved.</p>
 		</div>
 	</footer>
-
-
-	<script src="../js/wow.min.js"></script>
-         <script>
-              new WOW().init();
-         </script>
+	</div>
 
 </body>
 </html>
