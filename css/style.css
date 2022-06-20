@@ -380,12 +380,12 @@ p a{
 	grid-template-columns:1fr ;
 	grid-template-rows: auto;
 	grid-template-areas: 
-	"logo" "logo" "logo"
-	"nav" "nav" "nav"
-	"head" "head" "head"
-	"portf" "portf" "portf" 
-	"proy" "proy" "proy"
-	"foot" "foot" "foot";
+	"logo" 
+	"nav" 
+	"head" 
+	"portf"  
+	"proy" 
+	"foot" ;
 }
 
 
@@ -469,7 +469,7 @@ to {opacity: 1;}
 				border-radius: 200px;
 				filter:saturate(200%) ;
 			}
-
+			
 			
 
 		}
@@ -509,7 +509,6 @@ to {opacity: 1;}
 
 					#aboutme{
 						grid-area:me;
-
 					}
 
 					
@@ -523,7 +522,7 @@ to {opacity: 1;}
 						padding-bottom: 8%;
 						
 					}
-
+					
 			}
 
 
