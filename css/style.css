@@ -41,8 +41,7 @@ h3{
 }
 
 footer p {
-	color: white;
-	
+	color: white;	
 }
 
 
@@ -156,6 +155,7 @@ body nav {
 .proyectsListHome {
 	display: flex;
 	justify-content: center;
+
 	list-style-type: none;
 }
 
@@ -167,7 +167,7 @@ body nav {
 	object-fit: cover;
 	width: 190rem;
 	height: 290rem;
-	background-color: black;
+	padding: 13px;
 	
 }
 
@@ -220,7 +220,9 @@ footer ul li {
 
 #aboutmeBlock{
 	display: flex;
+
 	padding: 2%;
+
 }
 
 .neqoIrl{
@@ -230,6 +232,7 @@ footer ul li {
 .aboutmeText{
 	padding: 1% 0;
 	background-color: rgb(255, 222, 173, 0.9);
+
 }
 
 .colorGray{
@@ -345,19 +348,6 @@ p a{
 	
 }
 
-/*.contentGrid{
-	display: grid;
-	grid-template-columns: 1fr ;
-	grid-template-rows: auto;
-	grid-template-areas: 
-	"logo" "logo" "logo"
-	"nav" "nav" "nav"
-	"head" "head" "head"
-	"portf" "portf" "portf" 
-	"proy" "proy" "proy"
-	"foot" "foot" "foot";
-}
-
 #logoHome{
 	grid-area:logo;
 
@@ -379,11 +369,26 @@ p a{
 	grid-area: proy;
 }
 
-#footer{
+#pie{
 	grid-area: foot;
 
 }
-*//*  ANIMACIONES*/
+
+.contentGrid{
+	display: grid;
+	grid-template-columns:1fr ;
+	grid-template-rows: auto;
+	grid-template-areas: 
+	"logo" 
+	"nav" 
+	"head" 
+	"portf"  
+	"proy" 
+	"foot" ;
+}
+
+
+/*  ANIMACIONES*/
 
 @keyframes slow{
 from{opacity: 0;}
@@ -415,68 +420,121 @@ to {opacity: 1;}
 	filter: grayscale(0)
 }
 
-/*
-@keyframes shadow{
-	from{}
-	to{}
-}
+	/*  FIN      FIN    ANIMACIONES*/
 
-.shadow{
+	/*  LOS MEDIAQUERY  768  */
 
-}
-*/
-/*
-@media screen and (max-width:768px){
-	 .contentGrid{
-	 	grid-template-columns: 25vw 25vw 25vw 25vw;
-	 	grid-template-rows: repeat(5, auto);
-	 	grid-template-areas:
-	 	 "." "logo" "header"
-	 	 "nav" "nav" "nav"
-	 	 "." "portf" "."
-	 	 "." "proy" "."
-	 	 "foot" "foot" "foot" ; 
+	@media screen and (max-width:768px){
+		 .contentGrid{
+			display: grid;
+			grid-template-columns:repeat(2, 1fr) ;
+			grid-template-rows: auto;
+			grid-template-areas: 
+			"logo nav"
+			"head head"
+			"portf proy" 
+			"me me"
+			"foot foot";
+			}
 
-	 }
+			#aboutme{
+			grid-area:me;
 
-	.neqoLogo{
-		text-align: right;
-	} 
-}*/
+			}
 
+			#principalNav{
+				display: none;
+			}
 
+			#portfolioHome{
+				flex-direction: column;
+				align-items: center;
+			}
 
+			.proyectsListHome{
+				flex-direction: column;
+			}
 
-
-
-
-
-
-
-
-
-
-
-
+			#aboutmeBlock{
+				flex-direction: column;
+				align-items: center;
+				padding: 0 10%;
+				padding-bottom: 10%;
+			}
 
 
+			.neqoIrl{
+				width: 50%;
+				border-radius: 200px;
+				filter:saturate(200%) ;
+			}
+			
+			
+
+		}
+
+			/*  LOS MEDIAQUERY  320  */
+
+			@media screen and (max-width:320px){
+				 .contentGrid{
+					display: grid;
+					grid-template-columns:1fr ;
+					grid-template-rows: auto;
+					grid-template-areas: 
+					"logo"
+					"nav"
+					"head"
+					"portf" 
+					"proy" 
+					"me"
+					"foot";
+					}
+
+					#principalNav{
+						display: none;
+					}
+
+					
+
+					#portfolioHome{
+						flex-direction: column;
+						align-items: center;
+					}
+
+
+					.proyectsListHome{
+						flex-direction: column;
+					}
+
+					#aboutme{
+						grid-area:me;
+
+					}
+
+					
+					.neqoIrl{
+						width: 80%;
+						
+					}
+
+					#aboutmeBlock{
+						padding: 0 5%;
+						padding-bottom: 8%;
+						
+					}
+					
+			}
 
 
 
-/*
-.block-popularContainer .sample1{
-	background-color: green;
-	display: block;
-}
-
-.block-popularContainer .sample2{
-	background-color: beige;
-	display: block;
-}
 
 
-.block-popularContainer .sample3{
-	background-color: red;
-	display: block;
-}
-*/
+
+
+
+
+
+
+
+
+
