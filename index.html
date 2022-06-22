@@ -3,62 +3,67 @@
 <head>
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
+
+	<!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+
+
 	<title>Neqo</title>
 	<link rel="short cut icon" href="imagenes/cat.webp">
 	<link rel="stylesheet"  href="css/style.css">
 </head>
 
 <body>
-	<div class="contentGrid">
-	 <nav id="logoHome">
-	 	<a href="index.html">
-		<img src="imagenes/neqoDark2.svg" alt="Logo Principal" class="neqoLogo">
-	    </a>
-	 </nav>
-	  <nav id="principalNav">
-	 	<ul class="menu">
-	 		<li>
-	 			<a href="index.html">HOME</a>
-	 		</li>
-	 		<li>
-	 			<a href="secciones/about.html#aboutme">ABOUT ME</a>
-	 		</li>
-	 		<li>
-	 			<a href="secciones/portfolio.html#portM">PORTFOLIO</a>
-	 		</li>
-	 		<li>
-	 			<a href="secciones/projects.html#projects">PROJECTS</a>
+	
+	 <a class="navbar-brand displayFlex justify-content" href="index.html"> <img src="imagenes/neqoDark2.svg" alt="Logo Principal" class="neqoLogo"></a>
 
-	 			<ul class="submenu">
-	 				<li><a href="his_partner_visual_novel.html#hispartner">His Partner VSNL</a> 
-	 			    </li>
+	  <!-- inicia nav nav  -->
+ <nav class="navbar navbar-expand-lg navbar-light">
+  <div class="container-fluid">
+    
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"> </span>
+    </button>
+   
+    <div class="collapse navbar-collapse displayFlex justify-content" id="navbarNavDropdown">
+      <ul class="navbar-nav">
+        <li class="nav-item">
+          <a class="nav-link" aria-current="page" href="index.html">Home</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="secciones/about.html#aboutme">About me</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="secciones/portfolio.html#portM">Portfolio</a>
+        </li>
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="secciones/projects.html#projects" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+            Poryects
+          </a>
+          <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+            <li><a class="dropdown-item" href="his_partner_visual_novel.html#hispartner">His Partner</a></li>
+            <li><a class="dropdown-item" href="mural_project.html#muralproject">School Mural</a></li>
+            <li><a class="dropdown-item" href="enstars_comics.html#enstarscomic">Enstars Comics</a></li>
+          </ul>
+        </li>
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="secciones/comission.html#commission" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+            Comissions
+          </a>
+            <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+            <li><a class="dropdown-item" href="termsofservice.html">Terms of themis</a></li>
+            </ul>
+        </li>
 
-	 				<li><a href="mural_project.html#muralproject">
-	 					School Mural</a>
+      </ul>
+    </div>
+  </div>
+</nav>
 
-	 				</li>
-	 				<li>
-	 					<a href="enstars_comics.html#enstarscomic">
-	 					Enstars Comics</a>
-	 				</li>
+    <!-- final nav nav --> 
 
 
-	 			</ul>
-	 		</li>
-	 		<li>
-	 			<a href="secciones/comission.html#commission">COMISSION</a>
-	 			<ul class="submenu">
-	 				<li><a href="termsofservice.html">
-	 					Terms of Service</a>
-	 				</li>
-	 			</ul>
-	 		</li>
-	 		<li>
-	 			<a href="secciones/contact.html#contact">CONTACT</a>
-	 		</li>
-	 	</ul>
-	 	
-	 </nav>
+	
 	<header id="header"> 
 		<img class="inicioPortada" src="imagenes/FOqUr2qWUAIFr4e.webp" alt="Portada Principal">
 		<h1>WELCOME! </h1>
@@ -67,7 +72,7 @@
 
 	
 
-	<main id="portfolioHomeGrid"> 
+	<div id="portfolioHomeGrid"> 
 
    		<h2><a href="portfolio.html"  class="textDecorationHome" >Portfolio</h2> </a>
 
@@ -80,7 +85,7 @@
 	    	<a href="secciones/portfolio.html#portM"><img src="imagenes/FS-4OdbXsAEcKCq.webp" alt="Witch" class="homePortfolio"></a>
 
 	    </div>
-     </main>
+     </div>
 
 	
 	<div id="proyectsHomeGrid" class="proyectHomeBlock">
@@ -89,19 +94,18 @@
 	    
 	 	 <div class="proyectsListHome" >
 	 	 
-	 		<a href="secciones/his_partner_visual_novel.html#hispartner" >
-	 	   <img src="imagenes/main_menu2.webp" alt="Portada HisPartner" class="proyectImg"> </a></li>
+	 		<a href="secciones/his_partner_visual_novel.html#hispartner"> <img src="imagenes/main_menu2.webp" alt="Portada HisPartner" class="proyectImg">
+	 		</a>
 	    
-	    	<li>	    	
-	    	<a href="secciones/mural_project.html#muralproject"   >
-	 	   <img src="imagenes/1362f10e-b759-497a-aee3-106e7ef9b6e8.webp" alt="Mural" class="proyectImg"> </a></li>
+	    		    	
+	    	<a href="secciones/mural_project.html#muralproject"><img src="imagenes/1362f10e-b759-497a-aee3-106e7ef9b6e8.webp" alt="Mural" class="proyectImg">
+	    	</a>
 	 	
-	 	<li>
-	 		<a href="secciones/enstars_comics.html#enstarscomic" >
-	 	   <img src="imagenes/FJxOfWFXwAA1fMd.webp" alt="Comic" class="proyectImg"></a></li>
-	 	   </ul>
-	
-	 </div>
+	 	
+	 		<a href="secciones/enstars_comics.html#enstarscomic" > <img src="imagenes/FJxOfWFXwAA1fMd.webp" alt="Comic" class="proyectImg">
+	 		</a>
+	 	</div>
+	 	
 	</div>
 
 
@@ -140,8 +144,9 @@
 		<p class="footerTextPadding">Neqo © 2022. All rights reserved.</p>
 		</div>
 	</footer>
-
-    </div>
+    
+    <!-- Option 1: Bootstrap Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
 
 </body>
 </html>
