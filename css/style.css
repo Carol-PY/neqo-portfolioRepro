@@ -45,6 +45,7 @@ body {
 
 }
 
+
 /*FLEX CLASES*/
 
 .displayFlex{
@@ -61,7 +62,6 @@ body {
 /*LOGO NEQO GRANDE NEGRO*/
 .neqoLogo{
 	width: 22%;
-	height: 10%;
 }
 
 
@@ -71,7 +71,9 @@ body {
 .navbar-light{
  	background-color:rgb(255, 153, 204, 0.5);
 }
-
+.dropdown-menu{
+	background-color:rgb(230, 230, 230, 0.9);
+}
 
 .navbar-light .navbar-nav .nav-link, .dropdown-item, .navbar-toggler {
     padding: 10px;
@@ -90,6 +92,7 @@ body {
 	object-fit: cover;
 	width: 100%;
 	height: 10rem;	
+
 }
 
 
@@ -100,7 +103,7 @@ body {
 
  }
 
-/* aca portfolio contenido*/
+/* aca portfolio index*/
  
  #portfolioHome{
  	justify-content: center;
@@ -123,13 +126,9 @@ body {
 .proyectsListHome {
 	display: flex;
 	justify-content: center;
-
 	list-style-type: none;
 }
 
-.proyectsListHome li{
-	padding: 1%;
-}
 
 .proyectImg{
 	object-fit: cover;
@@ -161,7 +160,6 @@ footer ul li {
 }
 
 
-
 .footerIcon{
 	width: 100%;
 	text-decoration: none;
@@ -176,34 +174,32 @@ footer ul li {
 }
 
 
+
+
+
+
+
 /*     aca el aboutme       */
 /**/
 
-
-.displayFlex{
-    display: flex;
-}
-
 #aboutmeBlock{
 	display: flex;
-
 	padding: 2%;
-
 }
 
 .neqoIrl{
 	width: 40%;
-	
 }
-.aboutmeText{
+
+.aboutmeDiv{
 	padding: 1% 0;
 	background-color: rgb(255, 222, 173, 0.9);
-
 }
 
-.colorGray{
+.colorGrayHI{
 	color:rgb(51, 51, 51);
-
+	font-size: 10rem;
+	font-weight: 800;
 }
 
 main p{
@@ -230,9 +226,9 @@ main p{
 	width: 22%;
 	margin: 0.5rem;
 	object-fit: cover;
-
-	
 }
+
+
 
 /*Proyect*/
 
@@ -303,9 +299,6 @@ fieldset{
 	margin-left: 15%;
 	text-align: center;
 	outline: none;
-	
-	
-	
 }
 
 p a{
@@ -313,33 +306,9 @@ p a{
 	font-weight: bolder;
 	
 }
+
+
 /*
-#logoHome{
-	grid-area:logo;
-
-}
-
-#principalNav{
-	grid-area: nav;
-}
-
-#header{
-	grid-area: head;
-}
-
-#portfolioHomeGrid{
-	grid-area: portf;
-}
-
-#proyectsHomeGrid{
-	grid-area: proy;
-}
-
-#pie{
-	grid-area: foot;
-
-}
-
 .contentGrid{
 	display: grid;
 	grid-template-columns:1fr ;
@@ -352,6 +321,9 @@ p a{
 	"proy" 
 	"foot" ;
 }*/
+
+
+
 
 
 /*  ANIMACIONES*/
@@ -397,7 +369,86 @@ to {opacity: 1;}
 	filter: grayscale(0)
 }
 
+
+.hideDeskop{
+	display: none;
+}
+
 	/*  FIN      FIN    ANIMACIONES*/
+
+
+
+
+@media screen and (max-width:768px){
+			
+
+			.hide{
+				display: none;
+			}
+
+			#aboutmeBlock{
+				flex-direction: column;
+				align-items: center;
+				padding: 0 10%;
+				padding-bottom: 10%;
+			}
+
+
+			.neqoIrl{
+				width: 50%;
+				border-radius: 200px;
+				filter:saturate(200%) ;
+			}
+
+
+		}
+
+
+
+			@media screen and (max-width:320px){
+
+				#portfolioHome, .proyectsListHome{
+					flex-direction: column;
+    				align-items: center;
+
+				}
+
+				.neqoIrl{
+					width: 80%;	
+				}
+
+				#aboutmeBlock{
+					padding: 0 5%;
+					padding-bottom: 8%;	
+				}
+
+				#portfolioHome img{
+					width: none;
+				}
+
+				.portfolioHome{
+					height: 100%;
+					margin-bottom:10px ;
+				}
+
+				.hide, .hideDeskop{
+					display: block;
+				}
+
+				.hide320{
+					display: none;
+				}
+
+
+				.carousel-control-prev-icon, .carousel-control-next-icon{
+				height: 100px;
+   				width: 100px;
+				}
+
+
+			}
+
+
 
 	/*  LOS MEDIAQUERY  768  */
 
