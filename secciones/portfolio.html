@@ -2,70 +2,84 @@
 <html>
 <head>
 	<meta charset="utf-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="viewport" content="width=device-width, initial-scale=1 ">
+
+	<!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+
+
 	<title>Neqo</title>
 	<link rel="short cut icon" href="imagenes/cat.webp">
 	<link rel="stylesheet"  href="../css/style.css">
+
+	
 	
 </head>
 
+
 <body>
-	 <nav>
-	 	<a href="../index.html">
-		<img src="../imagenes/neqoDark2.svg" alt="Logo Principal" class="neqoLogo">
-	    </a>
-	 </nav>
-	  <nav>
-	 	<ul class="menu">
-	 		<li class="paddingLeft">
-	 			<a href="../index.html">HOME</a>
-	 		</li>
-	 		<li class="paddingLeft">
-	 			<a href="about.html#aboutme">ABOUT ME</a>
-	 		</li>
-	 		<li class="paddingLeft">
-	 			<a href="portfolio.html#portM">PORTFOLIO</a>
-	 		</li>
-	 		<li class="paddingLeft">
-	 			<a href="projects.html#projects">PROJECTS</a>
-	 			<ul class="submenu">
-	 				<li><a href="his_partner_visual_novel.html#hispartner">His Partner VSNL</a> 
-	 			    </li>
+	
+	  <!--  LOGO NEQO -->
+ 	<a class="navbar-brand displayFlex justify-content" href="../index.html"> <img src="imagenes/neqoDark2.svg" alt="Logo Principal" class="neqoLogo"></a>
 
-	 				<li><a href="mural_project.html#muralproject">
-	 					School Mural</a>
+	  <!-- inicia nav nav  -->
+ <nav class="navbar navbar-expand-lg navbar-light">
+  <div class="container-fluid">
+    
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"> </span>
+    </button>
+   
+    <div class="collapse navbar-collapse displayFlex justify-content" id="navbarNavDropdown">
+      <ul class="navbar-nav">
+        <li class="nav-item">
+          <a class="nav-link" aria-current="page" href="../index.html">Home</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="about.html#aboutme">About me</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="portfolio.html#portM">Portfolio</a>
+        </li>
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="projects.html#projects" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+            Proyects
+          </a>
+          <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+            <li><a class="dropdown-item" href="his_partner_visual_novel.html#hispartner">His Partner</a></li>
+            <li><a class="dropdown-item" href="mural_project.html#muralproject">School Mural</a></li>
+            <li><a class="dropdown-item" href="enstars_comics.html#enstarscomic">Enstars Comics</a></li>
+          </ul>
+        </li>
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="comission.html#commission" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+            Comissions
+          </a>
+            <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+            <li><a class="dropdown-item" href="termsofservice.html">Terms of themis</a></li>
+            </ul>
+        </li>
 
-	 				</li>
-	 				<li>
-	 					<a href="enstars_comics.html#enstarscomic">
-	 					Enstars Comics</a>
-	 				</li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+    <!-- final nav nav --> 
 
 
-	 			</ul>
-	 		</li>
-	 		<li class="paddingLeft">
-	 			<a href="comission.html#commission">COMISSION</a>
-	 			<ul class="submenu">
-	 				<li><a href="termsofservice.html">
-	 					Terms of Service</a>
-	 				</li>
-	 			</ul>
-	 		</li>
-	 		<li class="paddingLeft">
-	 			<a href="contact.html#contact">CONTACT</a>
-	 		</li>
-	 	</ul>
-	 	
-	 </nav>
 	<header> 
 		<img class="inicioPortada" src="imagenes/FOqUr2qWUAIFr4e.webp" alt="Portada Principal">
 
 	</header>
 
+
+	<!-- Aca incia el Portfolio -->
+
+
 		<a href="#" id="portM"></a>
 	    <h1>Portfolio</h1>
-	 <main class="PortfolioMain">  
+	 <main class="PortfolioMain hide320">  
 
 	<div class="displayJustify displayFlex">
 		
@@ -97,9 +111,64 @@
 </main>  
 
 
+<!-- CARRUSEL INICIO - PROYECTS -->
+<div id="carruselDiv" class="hideDeskop ">
+
+  
+	<div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel">
+    <div class="carousel-inner">
+
+      <div class="carousel-item active">
+        <img src="imagenes/EBoKZAmXYAEEAeu.webp" class=" d-block w-100 portfolioHome"  alt="fugo close up">
+      </div>
+
+      <div class="carousel-item ">
+        <img src="imagenes/FOtvw9vWYAU-bFM.webp" class="d-block w-100 portfolioHome" alt="Abbachio"  >
+      </div>
+
+      <div class="carousel-item ">
+        <img src="imagenes/FPnsV_PWQAUqNTF.webp" class="d-block w-100 portfolioHome" alt="Arashi red"  >
+      </div>
 
 
-	<footer > 
+
+      <div class="carousel-item ">
+        <img src="imagenes/EqQUQsJXAAAD3wd.webp" class="d-block w-100 portfolioHome" alt="Arashi Fuku"  >
+      </div>
+
+      <div class="carousel-item ">
+        <img src="imagenes/FHnvMwEXsAAO3QF.webp" class="d-block w-100 portfolioHome" alt="Takumi Watercolor">
+      </div>
+
+      <div class="carousel-item ">
+        <img src="imagenes/FHeNrnsXsAMEG_G.webp" class="d-block w-100 portfolioHome" alt="Arashi ParadiseKiss">
+      </div>
+
+      <div class="carousel-item ">
+        <img src="imagenes/FR43TZYXoAIoLZO.webp" class="d-block w-100 portfolioHome" alt="Murdoc"  >
+      </div>
+
+      <div class="carousel-item">
+        <img src="imagenes/FS-4OdbXsAEcKCq.webp" class=" d-block portfolioHome" alt="Witch">
+      </div>
+
+    </div>
+
+  <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="prev">
+    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Previous</span>
+  </button>
+  <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="next">
+    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Next</span>
+  </button>
+
+</div>
+
+</div>
+
+
+	<footer class="col-sm-12 col-md-12 col-xl-12" > 
 		<div id="footer">
 		<ul>
 			<li> 
@@ -132,7 +201,10 @@
 		
 		<p class="footerTextPadding">Neqo © 2022. All rights reserved.</p>
 		</div>
-	</footer>
+	</footer> </h2>
+
+	<!-- Option 1: Bootstrap Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
 
 
 
