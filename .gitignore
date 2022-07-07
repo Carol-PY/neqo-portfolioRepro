@@ -1,3 +1,4 @@
 *.png
 *.jfif
 *.jpg
+node_modules/

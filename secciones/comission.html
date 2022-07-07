@@ -2,68 +2,69 @@
 <html>
 <head>
 	<meta charset="utf-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="viewport" content="width=device-width, initial-scale=1 ">
+
+	<!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
 
 
-
-	
 	<title>Neqo</title>
 	<link rel="short cut icon" href="imagenes/cat.webp">
 	<link rel="stylesheet"  href="../css/style.css">
 
-</head>
-</head>
+
 
 <body>
-	 <nav>
-	 	<a href="../index.html">
-		<img src="../imagenes/neqoDark2.svg" alt="Logo Principal" class="neqoLogo">
-	    </a>
-	 </nav>
-	  
-	   <nav>
-	 	<ul class="menu">
-	 		<li class="paddingLeft">
-	 			<a href="../index.html">HOME</a>
-	 		</li>
-	 		<li class="paddingLeft">
-	 			<a href="about.html#aboutme">ABOUT ME</a>
-	 		</li>
-	 		<li class="paddingLeft">
-	 			<a href="portfolio.html#portM">PORTFOLIO</a>
-	 		</li>
-	 		<li class="paddingLeft">
-	 			<a href="projects.html#projects">PROJECTS</a>
-	 			<ul class="submenu">
-	 				<li><a href="his_partner_visual_novel.html#hispartner">His Partner VSNL</a> 
-	 			    </li>
 
-	 				<li><a href="mural_project.html#muralproject">
-	 					School Mural</a>
-
-	 				</li>
-	 				<li>
-	 					<a href="enstars_comics.html#enstarscomic">
-	 					Enstars Comics</a>
-	 				</li>
+	<div class="contentGrid">
+	 
+	   <!-- logo   -->
+ 	<a class="navbar-brand displayFlex justify-content" href="../index.html"> <img src="imagenes/neqoDark2.svg" alt="Logo Principal" class="neqoLogo"></a>
 
 
-	 			</ul>
-	 		</li>
-	 		<li class="paddingLeft">
-	 			<a href="comission.html#commission">COMISSION</a>
-	 			<ul class="submenu">
-	 				<li><a href="termsofservice.html">
-	 					Terms of Service</a>
-	 				</li>
-	 			</ul>
-	 		</li>
-	 		<li class="paddingLeft">
-	 			<a href="contact.html#contact">CONTACT</a>
-	 		</li>
-	 	</ul>
-	 	
-	 </nav>
+	  <!-- inicia nav nav  -->
+ <nav class="navbar navbar-expand-lg navbar-light">
+  <div class="container-fluid">
+    
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"> </span>
+    </button>
+   
+    <div class="collapse navbar-collapse displayFlex justify-content" id="navbarNavDropdown">
+      <ul class="navbar-nav">
+        <li class="nav-item">
+          <a class="nav-link" aria-current="page" href="../index.html">Home</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="about.html#aboutme">About me</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="portfolio.html#portM">Portfolio</a>
+        </li>
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="projects.html#projects" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+            Proyects
+          </a>
+          <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+            <li><a class="dropdown-item" href="his_partner_visual_novel.html#hispartner">His Partner</a></li>
+            <li><a class="dropdown-item" href="mural_project.html#muralproject">School Mural</a></li>
+            <li><a class="dropdown-item" href="enstars_comics.html#enstarscomic">Enstars Comics</a></li>
+          </ul> 
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" aria-current="page" href="comission.html#commission">Comission</a>
+        </li>
+        <li class="nav-item">
+	          <a class="nav-link" href="contact.html#aboutme">Contact</a>
+	    </li>
+
+      </ul>
+    </div>
+  </div>
+</nav>
+
+
+    <!-- final nav nav --> 
 	<header> 
 		<img class="inicioPortada" src="imagenes/FOqUr2qWUAIFr4e.webp" alt="Portada Principal">
 
@@ -76,24 +77,25 @@
 		<p>☆ If you want to hire me for a private/personal commission please read through this page to get an overview of my services and current rates.</p>	
 		<p>☆ Before you order, please make sure to have read my <a href="termsofservice.html">Terms of Service</a> || These terms apply to private/personal commissions only.</p>
 		<section>
-			<form action="envio.php" method="post" class="commissionField">
-				<fieldset class="contact  displayWrap">
-					<label for="firstname">First Name</label>
-					<input type="text" name="name" id="firstname" placeholder="Naomi">
-					
-					<label for="secondname">Second Name</label>
-					<input type="text2" name="name" id="secondname" placeholder="Lopez">
-				</fieldset>
 
-				<fieldset class="contact  displayWrap">					
-					<label for="email">Email</label>
-					<input type="email" name="email" id="email" placeholder="12345@email.com" >
-				</fieldset>
+			 <form action="envio.php" method="post" class="commissionField">
+					<div class="mb-3">
+					  <label for="textName" class="form-label">First Name</label>
+					  <input type="text" class="form-control" id="textName" placeholder="Naomi">
+					</div>
 
-				
+					<div class="mb-3">
+					  <label for="textLast" class="form-label">Last Name</label>
+					  <input type="text" class="form-control" id="textLast" placeholder="Perez">
+					</div>
+
+					<div class="mb-3">
+					  <label for="email" class="form-label" for="firstname">Email</label>
+					  <input type="email" class="form-control" id="email" placeholder="name@example.com">
+					</div>
 
 
-				<fieldset class="contact">
+				<fieldset class="contact displayFlex flex-direction-column">
 
 					<label for="selectcomissiontype" >Select Comission Type</label>
 				    <select name="SMT" id="selectcomissiontype">Comission QUETIPO					
@@ -104,7 +106,7 @@
 				    </select>				
 				
 			    </fieldset>			
-				<fieldset class="contact">
+				<fieldset class="contact displayFlex flex-direction-column">
 					
 					<label for="selectcomissiondetail" >Select Comission Detail</label>
 				    <select name="SCD" id="selectcomissiondetail">Comission QUETIPO					
@@ -115,7 +117,7 @@
 				    </select>				
 				
 			    </fieldset>			
-				<fieldset class="contact">
+				<fieldset class="contact displayFlex flex-direction-column">
 					
 					<label for="selectbackgroundtype" >Select Background Type</label>
 				    <select name="SBT" id="selectbackgroundtype">Comission QUE					
@@ -129,26 +131,30 @@
 
 			    <fieldset>
 			    <br>
-
-			    <label class="details" for="details" >Details</label>
-			    
-			    <div class="displayBlock">
-
-			    <textarea cols="60" rows="5" id="details"></textarea>
-			    <br>
-			    <br>
-			    <input type="submit" value="Send">
-			    <input  type="reset" value="Cancel">
-			    </div>
+				<div class="mb-3">
+					<label for="textDetail" class="form-label">Details</label>
+					<textarea class="form-control" id="textDetail" rows="3"></textarea>
+					</div>
+					<div class="displayFlex flex-centrado">
+			    <input type="submit" value="Send"  class="input-btn">
+			    <input type="reset" value="Cancel" class="input-btn">
+			    	</div>
 			    </fieldset>
-			</form>	
-
+			</form>	 
 		</section>
 		</div>
 
 	</main>
+
+	
+
+
+	
+	
+		<footer id="pie" > 
 	
 	<footer class="col-sm-12 col-md-12 col-xl-12"> 
+
 		<div id="footer">
 		<ul>
 			<li> 
@@ -183,6 +189,11 @@
 		</div>
 	</footer>
 
+	</div>
+
+
+	<!-- Option 1: Bootstrap Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
 
 </body>
 </html>
