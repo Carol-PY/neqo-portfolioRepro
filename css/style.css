@@ -1,6 +1,6 @@
 @import url("https://fonts.googleapis.com/css2?family=Rubik&display=swap");
 * {
-  font-family: 'Rubik';
+  font-family: "Rubik", sans-serif;
   margin: 0;
   padding: 0; }
 
@@ -8,28 +8,56 @@ html {
   font-size: 10%; }
 
 h1 {
-  color: hotpink;
-  text-align: center;
+  color: #ff80aa;
   font-size: 24rem;
   font-weight: 200;
+  text-align: center;
   padding: 10rem; }
 
 h2 {
-  color: white;
-  text-align: center;
-  font-size: 2rem; }
+  color: #333333;
+  font-size: 15rem;
+  font-weight: 400;
+  text-align: center; }
 
 h3 {
-  color: white;
+  color: #ffd9b3;
   font-size: 2rem;
   text-align: center; }
 
 footer p {
-  color: white; }
+  color: #ffd9b3; }
 
 body {
-  background-image: url(../imagenes/pixel-heart.webp);
-  background-attachment: fixed; }
+  background-color: #f2f2f2; }
+
+a {
+  text-decoration: none;
+  color: #b3b3b3;
+  font-size: 15rem; }
+
+/*      aca empieza el footer    */
+#footer {
+  background-color: #ffb3d9;
+  margin-top: 30px; }
+
+footer ul {
+  display: flex;
+  justify-content: center;
+  list-style-type: none; }
+  footer ul li {
+    width: 25rem;
+    margin: 5px 5px; }
+
+.footerIcon {
+  width: 100%;
+  text-decoration: none; }
+
+.footerTextPadding {
+  text-align: center;
+  text-decoration: none;
+  color: #333333;
+  padding: 0 0; }
 
 /*FLEX CLASES*/
 .displayFlex {
@@ -48,17 +76,15 @@ body {
   justify-content: center; }
 
 /*FIN  FLEX CLASES*/
+/*LOGO NEQO GRANDE NEGRO*/
 .neqoLogo {
   width: 300px;
   object-fit: cover; }
 
-/*LOGO NEQO GRANDE NEGRO*/
 /*NAV SECTION*/
 .navbar-light {
-  background-color: #ffb3d9; }
-
-.dropdown-menu {
-  background-color: indianred; }
+  background-color: #ff99cc;
+  font-weight: 200; }
 
 .navbar-light .navbar-nav .nav-link, .dropdown-item, .navbar-toggler {
   padding: 10px;
@@ -74,20 +100,17 @@ body {
   width: 100%;
   height: 10rem; }
 
-.textDecorationHome {
-  text-decoration: none;
-  color: DimGray;
-  font-size: 15rem; }
-
 /* aca portfolio index*/
+#portfolioHomeBlock {
+  padding-bottom: 30px; }
+
 #portfolioHome {
   justify-content: center; }
-
-#portfolioHome img {
-  object-fit: cover;
-  width: 190rem;
-  height: 290rem;
-  padding: 13px; }
+  #portfolioHome img {
+    object-fit: cover;
+    width: 190rem;
+    height: 290rem;
+    padding: 13px; }
 
 /*proyects index */
 .proyectsHomeBlock {
@@ -104,30 +127,6 @@ body {
   height: 290rem;
   padding: 13px; }
 
-/*      aca empieza el footer    */
-#footer {
-  background-color: #ffb3d9;
-  margin-top: 30px; }
-
-footer ul {
-  display: flex;
-  justify-content: center;
-  list-style-type: none; }
-
-footer ul li {
-  width: 25rem;
-  margin: 5px 5px; }
-
-.footerIcon {
-  width: 100%;
-  text-decoration: none; }
-
-.footerTextPadding {
-  text-align: center;
-  text-decoration: none;
-  color: black;
-  padding: 0 0; }
-
 #aboutmeBlock {
   display: flex;
   padding: 2%; }
@@ -138,53 +137,45 @@ footer ul li {
 .aboutmeDiv {
   padding: 1% 0;
   background-color: #ffe6cc; }
-
-.colorGrayHI {
-  color: #333333;
-  font-size: 10rem;
-  font-weight: 800; }
-
-main p {
-  font-size: 9rem;
-  font-weight: bolder;
-  color: #333333;
-  padding: 2%;
-  margin: 2%; }
+  .aboutmeDiv p {
+    font-size: 9rem;
+    font-weight: 800;
+    color: #333333;
+    padding: 2%;
+    margin: 2%; }
 
 /*portfolio */
 .PortfolioMain {
   width: 100%; }
 
-.displayJustify {
+.porfolioBlock {
   justify-content: center; }
-
-.displayJustify img {
-  display: inline-block;
-  width: 22%;
-  margin: 0.5rem;
-  object-fit: cover; }
+  .porfolioBlock img {
+    display: inline-block;
+    width: 22%;
+    margin: 0.5rem;
+    object-fit: cover; }
 
 /*Proyect*/
 .proyectsList {
   display: flex;
   justify-content: center;
   list-style-type: none; }
-
-.proyectsList li {
-  padding: 1%; }
+  .proyectsList li {
+    padding: 1%; }
 
 .accordion-item:last-of-type .accordion-button.collapsed {
-  background-color: black; }
+  background-color: #333333; }
 
 .img {
   width: 50%;
   object-fit: cover; }
 
 .accordion-button {
-  background-color: hotpink; }
+  background-color: #ffb3d9; }
 
 .accordion-body {
-  background-color: cornsilk; }
+  background-color: #b3b3b3; }
 
 #accordionFlushExample, .accordion-header {
   background-color: lavenderblush;
@@ -213,10 +204,6 @@ select {
   padding: 5px 5px;
   margin: 1% 1%; }
 
-p a {
-  color: LemonChiffon;
-  font-weight: bolder; }
-
 /*  ANIMACIONES*/
 @keyframes slow {
   from {
@@ -233,11 +220,11 @@ p a {
   animation-duration: 0.45s; }
 
 .navbar-nav .nav-item .nav-link:hover {
-  color: hotpink;
+  color: #ff339c;
   transition: 1s; }
 
 .dropdown-item:hover {
-  color: hotpink;
+  color: #ff339c;
   transition: 0.5s; }
 
 @keyframes shadow {
@@ -257,6 +244,10 @@ p a {
 .hideDeskop {
   display: none; }
 
+a:hover {
+  color: #4d4d4d;
+  transition: 1s; }
+
 /*  FIN      FIN    ANIMACIONES*/
 /*  LOS MEDIAQUERY  768  */
 @media screen and (max-width: 768px) {
@@ -270,7 +261,7 @@ p a {
   .neqoIrl {
     width: 50%;
     border-radius: 200px;
-    filter: saturate(200%); } }
+    filter: saturate(110%); } }
 
 @media screen and (max-width: 320px) {
   #portfolioHome, .proyectsListHome {

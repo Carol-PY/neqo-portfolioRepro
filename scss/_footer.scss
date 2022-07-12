@@ -1,0 +1,30 @@
+/*      aca empieza el footer    */
+
+#footer{
+	background-color:$secondColor;
+	margin-top: 30px;
+}
+
+footer ul{
+	display: flex;
+	justify-content: center;
+	list-style-type: none;
+	li {
+		width: 25rem;
+	 	margin: 5px 5px;
+	} 
+ }
+
+
+
+.footerIcon{
+	width: 100%;
+	text-decoration: none;
+}
+
+.footerTextPadding{
+	text-align: center;
+	text-decoration: none;
+	color: $textColorThird;
+	padding: 0 0;
+}

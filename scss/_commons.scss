@@ -1,0 +1,54 @@
+//fonts
+@import url('https://fonts.googleapis.com/css2?family=Rubik&display=swap');
+$mainFont:'Rubik', sans-serif;
+
+*{
+	font-family:$mainFont;
+	margin: 0;
+	padding: 0;
+}
+
+html {
+	font-size:$all-Size;
+}
+
+
+h1{
+	color: $textColorMain;
+	font-size: $principalSize;
+	font-weight:$fontW-S;
+	text-align: center;
+	padding: 10rem;
+	
+}
+
+h2{
+	color:$textColorThird;
+	font-size: $thirthSize;
+	font-weight: $font-L;
+	text-align: center;	
+
+}
+ 
+h3{
+	color:$textColorSecond;
+	font-size: $secondarySize;
+	text-align: center;
+
+}
+
+footer p {
+	color:$textColorSecond;	
+}
+
+
+body {
+	background-color:$mainColor;
+
+}
+
+a{
+	text-decoration: none;
+  	color: $textColorFourth;
+  	font-size: $thirthSize;
+}
