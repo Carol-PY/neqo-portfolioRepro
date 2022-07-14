@@ -1,7 +1,7 @@
 /*      aca empieza el footer    */
 
 #footer{
-	background-color:$secondColor;
+	background-color:map-get($map:$coloresDiv, $key:'divcolor_tres');
 	margin-top: 30px;
 }
 
@@ -25,6 +25,6 @@ footer ul{
 .footerTextPadding{
 	text-align: center;
 	text-decoration: none;
-	color: $textColorThird;
+	color: map-get($map:$coloresText, $key:'seis');
 	padding: 0 0;
 }

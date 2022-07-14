@@ -1,0 +1,51 @@
+//centrado y centrado sobre si mismo
+@mixin flex($justify, $align){
+	display:flex;
+	justify-content: $justify;
+	align-items: $align;
+}
+
+//solo centrado
+@mixin flex-center($center){
+	display:flex;
+	justify-content:$center;
+}
+
+//columna y centrado
+@mixin flex-column($column, $aling){
+	display:flex;
+	flex-direction: $column;
+	align-items:$aling;
+}
+
+
+// extend 
+.inicioPortada{
+	width:$width100;
+	object-fit: cover;
+} 
+
+.portfolioHome{
+	@extend .inicioPortada;
+	height: 10rem;	
+}
+//mapa de colores
+
+$coloresDiv:(
+	'divcolor_uno': rgb(242, 242, 242),
+	'divcolor_dos': rgb(255, 179, 217),
+	'divcolor_tres': rgb(255, 179, 255),
+	'divcolor_cuatro':rgb(255, 230, 204),
+	'divcolor_cinco':rgb(255, 77, 169),
+	'navcolor_uno': rgb(255, 153, 204),
+	'divcolor_seis':rgb(102, 102, 102),
+	);
+
+$coloresText:(
+	'uno':rgb(255, 128, 170),
+	'dos':rgb(255, 217, 179),
+	'tres':rgb(89, 87, 87),
+	'cuatro':rgb(255, 51, 156),
+	'cinco':rgb(197, 187, 187),
+	'seis':rgb(42, 40, 40),
+)

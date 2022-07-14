@@ -14,7 +14,7 @@ html {
 
 
 h1{
-	color: $textColorMain;
+	color: map-get($map:$coloresText, $key:'uno');
 	font-size: $principalSize;
 	font-weight:$fontW-S;
 	text-align: center;
@@ -23,32 +23,38 @@ h1{
 }
 
 h2{
-	color:$textColorThird;
+	color:map-get($map:$coloresText, $key:'cinco');
 	font-size: $thirthSize;
 	font-weight: $font-L;
 	text-align: center;	
+	padding: 10px;
 
 }
  
 h3{
-	color:$textColorSecond;
-	font-size: $secondarySize;
+	color:map-get($map:$coloresText, $key:'dos');
+	font-size: $forthSize;
 	text-align: center;
+
 
 }
 
 footer p {
-	color:$textColorSecond;	
+	color:map-get($map:$coloresText, $key:'tres');	
 }
 
 
 body {
-	background-color:$mainColor;
+	background-color:map-get($map:$coloresDiv, $key:'divcolor_uno');
 
 }
 
 a{
 	text-decoration: none;
-  	color: $textColorFourth;
+  	color:map-get($map:$coloresText, $key:'tres');
   	font-size: $thirthSize;
+  	&:hover {
+  		color:map-get($map:$coloresText, $key:'cinco');
+		transition: 1s;
+  	}
 }

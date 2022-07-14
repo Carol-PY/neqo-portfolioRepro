@@ -1,36 +1,32 @@
 //imports
 @import "_vars";
+@import "_mixins";
 @import "_commons";
 @import "_footer";
 
 
 /*FLEX CLASES*/
-
 .displayFlex{
-	display: flex;
+ 	display: flex;
 } 
 
 .justify-content{
 	justify-content:space-around;
 }
 
-.flex-direction-column, .accordion-button{
-	flex-direction: column;
-}
-
-.displayWrap{
-	flex-flow:  wrap row;
-}
-
 .flex-centrado{
 	justify-content: center
 }
 
-/*FIN  FLEX CLASES*/
-/*LOGO NEQO GRANDE NEGRO*/
+.flex-direction-column, .accordion-button{
+	flex-direction: column;
+}
 
+/*FIN  FLEX CLASES*/
+
+/*LOGO NEQO IMG*/
 .neqoLogo{
-	width: 300px;
+	width: $width20;
 	object-fit: cover;
 }
 
@@ -39,70 +35,50 @@
 /*NAV SECTION*/
 
 .navbar-light{
-	background-color:$navBar_mainColor;
+	background-color:map-get($map:$coloresDiv, $key:'navcolor_uno');
 	font-weight:$fontW-S;
 }
 
 
 .navbar-light .navbar-nav .nav-link, .dropdown-item, .navbar-toggler {
     padding: 10px;
-    font-size: 10rem;
-}
-
-/*Arreglos visuales del Home */
-
-.inicioPortada{
-	width: 100%;
-	object-fit: cover;
-} 
-
-
-.portfolioHome{
-	object-fit: cover;
-	width: 100%;
-	height: 10rem;	
-
+    font-size:$navBarSize;
 }
 
 
-/* aca portfolio index*/
 
-#portfolioHomeBlock{
-	padding-bottom: 30px;
+/* aca portfolio y proyect index*/
+// #portfolioHomeBlock, {
+// 	background-color:rgb(255, 230, 255);
+// }
+
+#proyectHomeBlock, #portfolioHomeBlock {
+	// background-color: rgb(255, 102, 153);
+	padding-bottom:5%;
 }
+
+// #portfolioHomeBlock{
+// 	background-color: rgb(255, 230, 204);
+// 	padding:5%;
+	// padding-bottom: 10%; }
  
-#portfolioHome{
- 	justify-content: center;
- 	img {
+  /*proyects y portfolio index */
+#portfolioHome, .proyectsListHome{
+ 	@include flex(center, center);
+ 	.img-Fixed {
  		object-fit: cover;
 		width: 190rem;
 		height: 290rem;
-		padding: 13px;
-    }
+		padding: 2% 1%;
+		margin: 5px;
+		box-shadow:$shadow-home;
+	}
 }
 
- /*proyects index */
 
-.proyectsHomeBlock{
- 	padding: 5%;
- }
-
-.proyectsListHome {
-	display: flex;
-	justify-content: center;
-	list-style-type: none;
-}
-
-.proyectImg{
-	object-fit: cover;
-	width: 190rem;
-	height: 290rem;
-	padding: 13px;	
-}
-
+//About me HTML
 
 #aboutmeBlock{
-	display: flex;
 	padding: 2%;
 }
 
@@ -112,64 +88,57 @@
 
 .aboutmeDiv{
 	padding: 1% 0;
-	background-color:$abotmeDivColor;
+	background-color:map-get($map:$coloresDiv, $key:'divcolor_cuatro');
 	p {
 		font-size:$forthSize;
 		font-weight:$font-XXL;
-		color:$textColorThird;
+		color:map-get($map:$coloresText, $key:'tres');
 		padding: 2%;
 		margin: 2%;
 
 	}
 }
 
+// footer
+#footer{
+	@include flex-column(column, center);
+}
 
-/*portfolio */
+/*portfolio html */
 .PortfolioMain {
-	width: 100%;
+	width:$width100;
 }
 
 .porfolioBlock{
-	justify-content: center;
+	@include flex-center(center);
 	img {		
-		display: inline-block;
 		width: 22%;
 		margin: 0.5rem;
 		object-fit: cover;
 		}
 }
 
-/*Proyect*/
+/*Proyect.html*/
 
-
-.proyectsList {
-	display: flex;
-	justify-content: center;
-	list-style-type: none;
-	li {
-		padding: 1%;
-	}
-}
-
-.accordion-item:last-of-type .accordion-button.collapsed{
-	background-color: $textColorThird;
-}
-
-.img{
-	width: 50%;
+.img_proyects{
+	width:$width50;
 	object-fit: cover;
 }
 
- .accordion-button{
-	background-color: $secondColor;
+.accordion-item:last-of-type .accordion-button.collapsed{
+	background-color:map-get($map:$coloresDiv, $key:'divcolor_tres');
+}
+
+.accordion-button{
+	background-color:map-get($map:$coloresDiv, $key:'divcolor_tres');
 }
 
 .accordion-body{
-	background-color: $textColorFourth;
+	background-color:map-get($map:$coloresDiv, $key:'divcolor_seis');
 }
 
 #accordionFlushExample, .accordion-header{
-	background-color: lavenderblush;
+	background-color: map-get($map:$coloresDiv, $key:'divcolor_cinco');
 	padding: 20px 10px;
 }
 
@@ -180,15 +149,14 @@
 .artcomissionBlock{
 	padding-top: 2%;
 	margin-left: 15%;
-	background-color: $comissionsColor;
-	width: 70%;
+	background-color:map-get($map:$coloresDiv, $key:'divcolor_cinco');
+	width:$width70;
 }
 
 select {
-	width: 70%;
+	width:$width70;
 	height: 30px;
 }
-
 
 .contact{
 	padding: 3% 1%;
@@ -197,7 +165,7 @@ select {
 .form-label, .form-control{
 	padding-top:1%;
 	margin-left:1%;
-	    width: 95%;
+	width: 95%;
 }
 
 .input-btn{
@@ -214,7 +182,7 @@ from{opacity: 0;}
 to {opacity: 1;}
 }
 
-.homePortfolio:hover,.proyectImg:hover{
+.img-Fixed:hover{
 	filter: blur(2px);
 	cursor: pointer;
 }
@@ -226,12 +194,12 @@ to {opacity: 1;}
 }
 
 .navbar-nav .nav-item .nav-link:hover{
- 	color: $navhoverColor;
+ 	color: map-get($map:$coloresText, $key:'cuatro');
  	transition: 1s;
  }
 
  .dropdown-item:hover{
- 	color: $navhoverColor;
+ 	color: map-get($map:$coloresText, $key:'cuatro');
  	transition: 0.5s;
  }
 
@@ -243,23 +211,18 @@ to {opacity: 1;}
 .PortfolioMain img{
 	animation-name:shadow;
 	filter: grayscale(90%);
+	&:hover{
+		transition: 0.3s;
+		cursor: pointer;
+		filter: grayscale(0)
+	}
 }
 
-.PortfolioMain img:hover{
-	cursor: pointer;
-	filter: grayscale(0)
-}
-
+	/*  FIN      FIN    ANIMACIONES*/
 
 .hideDeskop{
 	display: none;
 }
-
-a:hover{
-	color:$hoverColor;
-	transition: 1s;
-}
-	/*  FIN      FIN    ANIMACIONES*/
 
 	/*  LOS MEDIAQUERY  768  */
 
@@ -271,8 +234,7 @@ a:hover{
 			}
 
 			#aboutmeBlock{
-				flex-direction: column;
-				align-items: center;
+				@include flex-column(column, center);
 				padding: 0 10%;
 				padding-bottom: 10%;
 			}
@@ -292,8 +254,7 @@ a:hover{
 			@media screen and (max-width:320px){
 
 				#portfolioHome, .proyectsListHome{
-					flex-direction: column;
-    				align-items: center;
+					@include flex-column(column, center);
 				}
 
 				.neqoIrl{
@@ -325,9 +286,5 @@ a:hover{
 				.carousel-control-prev-icon, .carousel-control-next-icon{
 					height: 100px;
    					width: 100px;
-				}
-
-				#footer{
-					flex-direction: column;
 				}
 			}
