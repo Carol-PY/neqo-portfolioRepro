@@ -23,20 +23,18 @@ h1{
 }
 
 h2{
-	color:map-get($map:$coloresText, $key:'cinco');
+	color:map-get($map:$coloresDiv, $key:'divcolor_tres');
 	font-size: $thirthSize;
 	font-weight: $font-L;
 	text-align: center;	
 	padding: 10px;
 
 }
- 
+
 h3{
 	color:map-get($map:$coloresText, $key:'dos');
 	font-size: $forthSize;
 	text-align: center;
-
-
 }
 
 footer p {
@@ -45,16 +43,21 @@ footer p {
 
 
 body {
-	background-color:map-get($map:$coloresDiv, $key:'divcolor_uno');
-
+	background: linear-gradient(220.55deg, #fcfaf8 0%, #f3e4e8 100%);
+	
 }
 
 a{
 	text-decoration: none;
-  	color:map-get($map:$coloresText, $key:'tres');
-  	font-size: $thirthSize;
-  	&:hover {
-  		color:map-get($map:$coloresText, $key:'cinco');
+	color:map-get($map:$coloresText, $key:'tres');
+	font-size: $thirthSize;
+	&:hover {
+		color:map-get($map:$coloresText, $key:'cinco');
 		transition: 1s;
-  	}
+	}
+}
+
+label{
+	font-size:$forthSize;
+	font-weight:$font-L;
 }

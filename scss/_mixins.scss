@@ -18,6 +18,11 @@
 	align-items:$aling;
 }
 
+@mixin index-3 ($space-evenly, $center){
+	display: flex;
+	justify-content:$space-evenly;
+	align-items: $center;
+}r
 
 // extend 
 .inicioPortada{
@@ -32,10 +37,10 @@
 //mapa de colores
 
 $coloresDiv:(
-	'divcolor_uno': rgb(242, 242, 242),
+	'divcolor_uno': rgb(250, 245, 245),
 	'divcolor_dos': rgb(255, 179, 217),
-	'divcolor_tres': rgb(255, 179, 255),
-	'divcolor_cuatro':rgb(255, 230, 204),
+	'divcolor_tres': rgb(247, 216, 247),
+	'divcolor_cuatro':rgb(236, 205, 171),
 	'divcolor_cinco':rgb(255, 77, 169),
 	'navcolor_uno': rgb(255, 153, 204),
 	'divcolor_seis':rgb(102, 102, 102),

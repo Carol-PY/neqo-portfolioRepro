@@ -4,18 +4,20 @@
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1 ">
 
+	
+	<!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+
+	<!--CSS-->
+	<link rel="stylesheet"  href="../css/style.css">
+
 	<!-- ceo -->
 	<meta name="description" content="Comissions Open! Please first read the Terms of Service">
 	<meta name="author" content="Carolina Perez Yupanqui">
 
-	<!-- Bootstrap CSS -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
-
-
 	<title>Commissions</title>
 	<link rel="short cut icon" href="imagenes/cat.webp">
-	<link rel="stylesheet"  href="../css/style.css">
-
+	
 
 
 <body>
@@ -45,21 +47,14 @@
         <li class="nav-item">
           <a class="nav-link" href="portfolio.html#portM">Portfolio</a>
         </li>
-        <li class="nav-item dropdown">
-          <a class="nav-link dropdown-toggle" href="projects.html#projects" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-            Proyects
-          </a>
-          <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-            <li><a class="dropdown-item" href="his_partner_visual_novel.html#hispartner">His Partner</a></li>
-            <li><a class="dropdown-item" href="mural_project.html#muralproject">School Mural</a></li>
-            <li><a class="dropdown-item" href="enstars_comics.html#enstarscomic">Enstars Comics</a></li>
-          </ul> 
+        <li class="nav-item">
+			<a class="nav-link" href="projects.html#projects">Proyects</a> 
+		</li>
+        <li class="nav-item">
+          <a class="nav-link" aria-current="page" href="#">Comission</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" aria-current="page" href="comission.html#commission">Comission</a>
-        </li>
-        <li class="nav-item">
-	          <a class="nav-link" href="contact.html#aboutme">Contact</a>
+	          <a class="nav-link" href="contact.html#contact1">Contact</a>
 	    </li>
 
       </ul>
@@ -70,19 +65,19 @@
 
     <!-- final nav nav --> 
 	<header> 
-		<img class="inicioPortada" src="imagenes/FOqUr2qWUAIFr4e.webp" alt="Portada Principal">
+		<img class="inicioPortada img-fluid" src="imagenes/FOqUr2qWUAIFr4e.webp" alt="Portada Principal">
 
 	</header>
 	<main>
 		<h1>Commissions</h1> 
 
 		<div class="artcomissionBlock ">
-		<h3>ART COMMISSIONS </h3> <a href="#" id="commission" ></a>
-		<p>☆ If you want to hire me for a private/personal commission please read through this page to get an overview of my services and current rates.</p>	
-		<p>☆ Before you order, please make sure to have read my <a href="termsofservice.html">Terms of Service</a> || These terms apply to private/personal commissions only.</p>
+		<h2>ART COMMISSIONS </h2> <a href="#" id="commission" ></a>
+		<p class="word-wrap">☆ If you want to hire me for a private/personal commission please read through this page to get an overview of my services and current rates.</p>	
+		<p class="word-wrap">☆ Before you order, please make sure to have read my <a class="terms_txt" href="termsofservice.html">Terms of Service</a> || These terms apply to private/personal commissions only.</p>
 		<section>
 
-			 <form action="envio.php" method="post" class="commissionField">
+			<form action="envio.php" method="post" class="commissionField">
 					<div class="mb-3">
 					  <label for="textName" class="form-label">First Name</label>
 					  <input type="text" class="form-control" id="textName" placeholder="Naomi">

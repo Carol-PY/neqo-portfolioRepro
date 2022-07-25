@@ -14,8 +14,16 @@
 	justify-content:space-around;
 }
 
+.aling-center{
+	align-items: center;
+}
+
 .flex-centrado{
 	justify-content: center
+}
+
+.flex-evely{
+	justify-content: space-evenly;
 }
 
 .flex-direction-column, .accordion-button{
@@ -48,36 +56,23 @@
 
 
 /* aca portfolio y proyect index*/
-// #portfolioHomeBlock, {
-// 	background-color:rgb(255, 230, 255);
-// }
-
 #proyectHomeBlock, #portfolioHomeBlock {
-	// background-color: rgb(255, 102, 153);
 	padding-bottom:5%;
 }
 
-// #portfolioHomeBlock{
-// 	background-color: rgb(255, 230, 204);
-// 	padding:5%;
-	// padding-bottom: 10%; }
- 
   /*proyects y portfolio index */
 #portfolioHome, .proyectsListHome{
- 	@include flex(center, center);
- 	.img-Fixed {
- 		object-fit: cover;
+	@include index-3(space-evenly, center);
+	.img-Fixed {
+		object-fit: cover;
 		width: 190rem;
-		height: 290rem;
-		padding: 2% 1%;
-		margin: 5px;
+		height: 250rem;
 		box-shadow:$shadow-home;
 	}
 }
 
 
 //About me HTML
-
 #aboutmeBlock{
 	padding: 2%;
 }
@@ -95,7 +90,6 @@
 		color:map-get($map:$coloresText, $key:'tres');
 		padding: 2%;
 		margin: 2%;
-
 	}
 }
 
@@ -121,25 +115,34 @@
 /*Proyect.html*/
 
 .img_proyects{
+	width:$width70;
+	object-fit: cover;
+}
+
+.img_{
 	width:$width50;
 	object-fit: cover;
 }
 
 .accordion-item:last-of-type .accordion-button.collapsed{
-	background-color:map-get($map:$coloresDiv, $key:'divcolor_tres');
+	font-size: 20px;
 }
 
-.accordion-button{
-	background-color:map-get($map:$coloresDiv, $key:'divcolor_tres');
+.accordion-item:last-of-type .accordion-collapse{
+ background-color: rgb(241, 227, 243);	
 }
-
-.accordion-body{
-	background-color:map-get($map:$coloresDiv, $key:'divcolor_seis');
-}
-
 #accordionFlushExample, .accordion-header{
-	background-color: map-get($map:$coloresDiv, $key:'divcolor_cinco');
+	
 	padding: 20px 10px;
+	font-size: 20px;
+}
+
+button .accordion-button{
+	font-size: large;
+}
+
+.p_2{
+	margin: 10px 10px;
 }
 
 
@@ -149,8 +152,21 @@
 .artcomissionBlock{
 	padding-top: 2%;
 	margin-left: 15%;
-	background-color:map-get($map:$coloresDiv, $key:'divcolor_cinco');
+	background: linear-gradient(220deg, #FFDC99 0%, #FF62C0 100%);
 	width:$width70;
+}
+
+
+.word-wrap{
+	font-size:$forthSize;
+	margin: 0 20px;
+}
+.terms_txt{
+	font-size:$forthSize;
+	&:hover{
+		color:map-get($map:$coloresDiv, $key:'divcolor_uno');
+		transition: 8ms;
+	}
 }
 
 select {
@@ -167,13 +183,33 @@ select {
 	margin-left:1%;
 	width: 95%;
 }
-
 .input-btn{
 	padding:5px 5px;
 	margin: 1% 1%;
 }
 
+/** Contact html */
+.contact_divText{
+	background:linear-gradient(220.55deg, #e0d2da 0%, #FF9DE4 100%);
+	font-size:$forthSize;
+	font-weight:$font-XXL;
+	width:90%;
+	height: auto;
+	padding: 12px 10px;
+	margin: 10px;
+}
 
+.form-divContact{
+	margin: 20px;
+}
+
+.btn-lg{
+	width: 70px;
+	height: auto;
+	border-radius: 5px;
+	margin-top: 30px;
+	
+}
 
 /*  ANIMACIONES*/
 
@@ -229,7 +265,11 @@ to {opacity: 1;}
 @media screen and (max-width:768px){
 			
 
-			.hide{
+			.hide, .hideDeskop{
+				display: block;
+			}
+
+			.hide320{
 				display: none;
 			}
 
@@ -239,6 +279,18 @@ to {opacity: 1;}
 				padding-bottom: 10%;
 			}
 
+			#portfolioHome, .proyectsListHome{
+				@include flex-column(column, center);
+			}
+
+			.portfolioHome{
+				height: 50%;
+			}
+
+			#portfolioHome .img-Fixed, .proyectsListHome .img-Fixed{
+				width: 400rem;
+				padding-bottom: 20px;
+			}
 
 			.neqoIrl{
 				width: 50%;
@@ -255,6 +307,15 @@ to {opacity: 1;}
 
 				#portfolioHome, .proyectsListHome{
 					@include flex-column(column, center);
+					.img-Fixed {
+						object-fit: cover;
+						width: 150rem;
+						height: 250rem;
+						padding: 10px 5px;
+						padding: auto;
+						box-shadow:$shadow-home;
+					}
+					
 				}
 
 				.neqoIrl{
@@ -285,6 +346,6 @@ to {opacity: 1;}
 
 				.carousel-control-prev-icon, .carousel-control-next-icon{
 					height: 100px;
-   					width: 100px;
+					width: 100px;
 				}
 			}

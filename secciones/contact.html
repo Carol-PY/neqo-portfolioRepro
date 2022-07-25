@@ -5,20 +5,25 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1 ">
 
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+
+    <!--CSS-->
+	<link rel="stylesheet"  href="../css/style.css">
+
     <!-- ceo -->
 	<meta name="description" content="If you want to colab or just say hi, please free to do it!">
 	<meta name="author" content="Carolina Perez Yupanqui">
 
-    <!-- Bootstrap CSS -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    
     <title>Contact me</title>
     <link rel="short cut icon" href="imagenes/cat.webp">
-    <link rel="stylesheet" href="../css/style.css">
 
-<body>
+<body> 
     <div class="contentGrid">
         <!-- logo   -->
         <a class="navbar-brand displayFlex justify-content" href="../index.html"> <img src="imagenes/neqoDark2.svg" alt="Logo Principal" class="neqoLogo"></a>
+
         <!-- inicia nav nav  -->
         <nav class="navbar navbar-expand-lg navbar-light">
             <div class="container-fluid">
@@ -36,15 +41,8 @@
                         <li class="nav-item">
                             <a class="nav-link" href="portfolio.html#portM">Portfolio</a>
                         </li>
-                        <li class="nav-item dropdown">
-                            <a class="nav-link dropdown-toggle" href="projects.html#projects" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                                Proyects
-                            </a>
-                            <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-                                <li><a class="dropdown-item" href="his_partner_visual_novel.html#hispartner">His Partner</a></li>
-                                <li><a class="dropdown-item" href="mural_project.html#muralproject">School Mural</a></li>
-                                <li><a class="dropdown-item" href="enstars_comics.html#enstarscomic">Enstars Comics</a></li>
-                            </ul>
+                        <li class="nav-item">
+                            <a class="nav-link" href="projects.html#projects">Proyects</a> 
                         </li>
                         <li class="nav-item">
                             <a class="nav-link" aria-current="page" href="comission.html#commission">Comission</a>
@@ -58,36 +56,47 @@
         </nav>
         <!-- final nav nav -->
         <header>
-            <img class="inicioPortada" src="imagenes/FOqUr2qWUAIFr4e.webp" alt="Portada Principal">
+            <img class="inicioPortada img-fluid" src="imagenes/FOqUr2qWUAIFr4e.webp" alt="Portada Principal">
         </header>
-        <section>
-            <h3>Contact Me</h3>
-            <p>If you need to contact me please use this form. Whether it’s just to say ‘hi’, to ask questions about products, or even suggestions for what you’d like to see from me in the future, my inbox is always open!</p>
+        <section class="displayFlex flex-direction-column aling-center">
+            <h1>Contact Me</h1>
+            <div class="contact_divText">
+                <p>If you need to contact me please use this form. Whether it’s just to say ‘hi’, to ask questions about products, or even suggestions for what you’d like to see from me in the future, my inbox is always open!</p>
+            </div>
         </section>
-        <main>
-		
-            <form action="envio.php" method="post" id="contact">
-                <fieldset>
-                    <label for="firstname">First Name</label>
-                    <input type="text" name="name" id="firstname" placeholder="Naomi">
-                    <label for="secondname">Second Name</label>
-                    <input type="text" name="name" id="secondname" placeholder="Lopez">
-                    
-                    <label for="email">Email</label>
-                    <input type="email" name="email" id="email" placeholder="12345@email.com">
-                    
-                    <label for="subjet">Subjet</label>
-                    <input type="subjet" name="subjet" id="subjet">
-                </fieldset>
-                <label for="message">Message</label>
-                
-                <textarea cols="60" rows="5" id="message"></textarea>
-                <div class="displayFlex ">
-                <input type="submit" value="Send">
-                <input type="reset" value="Cancel">
-            	</div>
-            </form>
-        </main>
+
+
+
+        <!--  FORM   -->
+    <div id="contact1" class="form-divContact">
+        <form>
+            <!-- Name -->
+            <div class="form-outline mb-4">
+                <label class="form-label" for="name">Name</label>
+                <input type="text" id="name" class="form-control" />
+            </div>
+
+            <!-- Email -->
+            <div class="form-outline mb-4">
+                <label class="form-label" for="email">Email address</label>
+                <input type="email" id="email" class="form-control" />
+            </div>
+
+            <!-- Message-->
+            <div class="form-outline mb-4">
+                <label class="form-label" for="message">Message:</label>
+                <textarea class="form-control" rows="5" id="message" name="message"></textarea>
+            </div>
+
+            <!-- Boton -->
+            <div class="d-grid gap-2 d-md-flex justify-content-md-center">
+            <button type="submit" class="btn btn-dark btn-block btn-lg">Send</button>
+            </div>
+        </form>
+    </div>
+
+
+
         <footer id="pie">
             <footer class="col-sm-12 col-md-12 col-xl-12">
                 <div id="footer">
